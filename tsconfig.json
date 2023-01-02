@@ -4,18 +4,10 @@
     "transpileOnly": true,
     "files": true,
     "swc": true,
-    "esm": true,
-    "require": ["tsconfig-paths/register"],
-    "compilerOptions": {}
+    "esm": true
   },
   "compilerOptions": {
-    "outDir": "build",
-    "baseUrl": ".",
-    "paths": {
-      "@db/*": ["src/db/*"],
-      "@routes/*": ["src/routes/*"],
-      "helper/*": ["src/helper/*"]
-    }
+    "outDir": "build"
   },
   "include": ["src/**/*", "environment.d.ts"],
   "exclude": ["node_modules"]
