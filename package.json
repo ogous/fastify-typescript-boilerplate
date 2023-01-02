@@ -5,7 +5,7 @@
   "private": false,
   "type": "module",
   "scripts": {
-    "dev": "nodemon --watch './src' --exec node --loader ts-node/esm --experimental-specifier-resolution=node -r tsconfig-paths/register src/index.ts",
+    "dev": "nodemon --watch './src' --exec ts-node -r tsconfig-paths/register src/index.ts",
     "build": "rm -rf ./build/**/* && tsc -p tsconfig.json",
     "start": "node index.js",
     "start:dev": "node build/index.js",
