@@ -8,6 +8,8 @@ RUN npm run build
 FROM node:18-alpine AS starter
 ENV NODE_ENV production
 ENV PORT ${PORT}
+ENV ADMIN_USER ${ADMIN_USER}
+ENV ADMIN_PASSWORD ${ADMIN_PASSWORD}
 WORKDIR /usr/src/app
 RUN apk add shadow
 RUN groupmod -g 500 node && usermod -u 500 node

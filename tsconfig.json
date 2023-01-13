@@ -1,14 +1,13 @@
 {
   "extends": "@tsconfig/node18-strictest-esm/tsconfig.json",
-  "ts-node": {
-    "transpileOnly": true,
-    "files": true,
-    "swc": true,
-    "esm": true
-  },
   "compilerOptions": {
-    "outDir": "build"
+    "outDir": "build",
+    "removeComments": true,
+    "baseUrl": "src",
+    "paths": {
+      "#helper/*": ["helper/*"]
+    }
   },
-  "include": ["src/**/*", "environment.d.ts"],
+  "include": ["src/**/*.ts", "environment.d.ts", "esbuild.ts"],
   "exclude": ["node_modules"]
 }
